@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class
+            name="database.entry.Ware"
+            table="ware">
+        <id
+                name="wid">
+            <generator class="increment"/>
+        </id>
+        <property name="wname"/>
+        <property name="number"/>
+        <property name="price"/>
+        <property name="description"/>
+        <property name="availability"/>
+    </class>
+</hibernate-mapping>

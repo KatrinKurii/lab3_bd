@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class
+            name="database.entry.Fact"
+            table="facts">
+        <id name="fid">
+            <generator class="increment"/>
+        </id>
+        <many-to-one
+                name="maker"
+                column="mid"
+                class="database.entry.Maker"
+                not-null="true"/>
+
+        <many-to-one
+                name="buyer"
+                column="bid"
+                class="database.entry.Buyer"
+                not-null="true"/>
+
+        <many-to-one
+                name="seller"
+                column="sid"
+                class="database.entry.Seller"
+                not-null="true"/>
+
+        <many-to-one
+                name="ware"
+                column="wid"
+                class="database.entry.Ware"
+                not-null="true"/>
+        <property name="amount"/>
+        <property name="date"/>
+    </class>
+</hibernate-mapping>
