@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class
+            name="database.entry.Maker"
+            table="maker">
+        <id
+                name="mid">
+            <generator class="increment"/>
+        </id>
+        <property name="mname"/>
+        <property name="country"/>
+    </class>
+</hibernate-mapping>
